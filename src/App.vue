@@ -1,30 +1,36 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div>
+    <div class="preloader position-fixed d-flex align-items-center justify-content-center">
+      <div class="block">
+        <div class="loader-image mb-20">
+          <img src="@/assets/images/preloader.png" alt="">
+        </div>
+        <h2 class="loader-text text-uppercase">
+          <span class="h3 font-weight-light mb-1">Welcome to</span>
+          <span class="font-weight-bold">STFIL STAKE</span>
+        </h2>
+      </div>
+    </div>
+    <i-header/>
+    <router-view/>
+    <i-footer></i-footer>
+  </div>
 </template>
+<script>
+import IHeader from '@/components/header/IHeader'
+import IFooter from '@/components/footer/IFooter'
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+export default {
+  name: 'App',
+  components: {
+    IHeader,
+    IFooter
   }
 }
+</script>
+<style lang="scss">
+body {
+  background-color: #F6F6F6;
+}
 </style>
+
