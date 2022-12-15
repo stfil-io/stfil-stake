@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="position-relative" style="min-height: 100vh">
+    <img alt="" src="@/assets/images/bg.jpg" width="100%" height="100%" class="position-absolute" loading="lazy" style="color:transparent">
     <div class="preloader position-fixed d-flex align-items-center justify-content-center">
       <div class="block">
         <div class="loader-image mb-20">
@@ -30,7 +31,6 @@ export default {
 </script>
 <style lang="scss">
 body {
-  background-color: #F6F6F6;
 }
 </style>
 

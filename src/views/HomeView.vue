@@ -53,20 +53,20 @@
 
             <div class="text-black-600">
               <div class="row">
-                <div class="col-4 text-left">You will receive</div>
-                <div class="col-8 text-right">11 stFIL</div>
+                <div class="col-6 text-left">You will receive</div>
+                <div class="col-6 text-right">11 stFIL</div>
               </div>
               <div class="row mt-3">
-                <div class="col-4 text-left">Exchange rate</div>
-                <div class="col-8 text-right">1 FIL = 1 stFIL</div>
+                <div class="col-6 text-left">Exchange rate</div>
+                <div class="col-6 text-right">1 FIL = 1 stFIL</div>
               </div>
               <div class="row mt-3">
-                <div class="col-4 text-left">Transaction cost</div>
-                <div class="col-8 text-right">$1.50</div>
+                <div class="col-6 text-left">Transaction cost</div>
+                <div class="col-6 text-right">$1.50</div>
               </div>
               <div class="row mt-3">
-                <div class="col-4 text-left">Reward fee</div>
-                <div class="col-8 text-right">10%</div>
+                <div class="col-6 text-left">Reward fee</div>
+                <div class="col-6 text-right">10%</div>
               </div>
               <div class="mt-4">
                 <button v-if="!isConnected" class="btn btn-primary w-100" type="submit" @click="connectWallet">Connect

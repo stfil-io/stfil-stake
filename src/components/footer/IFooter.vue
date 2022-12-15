@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-light-gray has-shapes has-bg-brash bg-brash-top"
+  <footer class="has-shapes has-bg-brash bg-brash-top"
           style=" padding-top: 55px;">
     <div v-if="false" class="container">
       <div class="row pt-60 pb-60">
