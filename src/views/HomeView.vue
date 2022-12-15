@@ -2,7 +2,7 @@
   <section class="section-padding pt-2 horizontal-accordion bg-light-gray content-full-height">
     <div class="container">
       <div class="row justify-content-center">
-        <h3 class="font-weight-bold">Stake FIL</h3>
+        <h3 class="font-weight-bold" style="z-index: 1">Stake FIL</h3>
       </div>
 
       <div class="row justify-content-center mt-4">
