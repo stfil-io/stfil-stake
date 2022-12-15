@@ -54,11 +54,11 @@
             <div class="text-black-600">
               <div class="row">
                 <div class="col-4 text-left">You will receive</div>
-                <div class="col-8 text-right">11 stETH</div>
+                <div class="col-8 text-right">11 stFIL</div>
               </div>
               <div class="row mt-3">
                 <div class="col-4 text-left">Exchange rate</div>
-                <div class="col-8 text-right">1 ETH = 1 stETH</div>
+                <div class="col-8 text-right">1 FIL = 1 stFIL</div>
               </div>
               <div class="row mt-3">
                 <div class="col-4 text-left">Transaction cost</div>
@@ -93,15 +93,15 @@
                 <div class="col-6 text-right">4.6%</div>
               </div>
               <div class="row mt-3">
-                <div class="col-6 text-left">Total staked with Lido</div>
-                <div class="col-6 text-right">4,799,202.205 ETH</div>
+                <div class="col-6 text-left">Total staked with STFIL</div>
+                <div class="col-6 text-right">4,799,202.205 FIL</div>
               </div>
               <div class="row mt-3">
                 <div class="col-6 text-left">Stakers</div>
                 <div class="col-6 text-right">138041</div>
               </div>
               <div class="row mt-3">
-                <div class="col-6 text-left">stETH market cap</div>
+                <div class="col-6 text-left">stFIL market cap</div>
                 <div class="col-6 text-right">$6,285,336,337</div>
               </div>
             </div>
