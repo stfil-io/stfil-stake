@@ -149,12 +149,12 @@
 
             <div class="form-group mb-30">
               <div class="d-flex p-3 bg-light-gray" style="border-radius: 5px;">
-                <div class="col-6">
-                  <div class="text-black-800 fs-7">Total claimable rewards</div>
+                <div class="col-6 p-0">
+                  <div class="text-black-800 fs-8">Total claimable rewards</div>
                   <div class="font-weight-bold fs-5">0.0 FIL</div>
                 </div>
-                <div class="col-6">
-                  <div class="text-black-800 fs-7">Pending amount</div>
+                <div class="col-6 p-0">
+                  <div class="text-black-800 fs-8">Pending amount</div>
                   <div class="fs-5">0.0 FIL</div>
                 </div>
               </div>
