@@ -10,38 +10,33 @@
         <SlideTabs @select="selectTab"></SlideTabs>
       </div>
 
-      <div class="row justify-content-center ml-0 mr-0 ml-lg-3 mr-lg-3" v-if="isConnected">
-        <div class="col-xl-6 col-lg-6 row text-white align-items-center"
-             style="background: linear-gradient(52.01deg, rgb(40, 20, 74) 0%, rgb(81, 42, 150) 100%);
-             margin-bottom: -30px; padding: 30px 0 30px 0;border-top-left-radius: 1rem;border-top-right-radius: 1rem">
-          <div class="col-12 col-md-7 p-0" style="padding: 0 30px!important;">
-            <div class="fs-7">Available to stake</div>
-            <div class="fs-5 font-weight-bold">{{ balance ? parseFloat(balance.formatted).toFixed(6) || 0 : 0 }} FIL</div>
-          </div>
-          <div class="col-12 col-md-5 p-0 text-right d-none d-lg-block" style="padding-right: 30px!important;">
-            <div class="p-1 pl-2 pr-3 d-inline-flex"
-                 data-toggle="modal" data-target="#exampleModal"
-                 style="cursor: pointer; border-radius: 50px;background-color: rgba(0, 0, 0, 0.2)">
-              <div class="ml-1">
-              <span>
-               <img style="border-radius: 100%; width: 28px;" src="@/assets/images/avatar/default.webp" alt="">
-              </span>
-                <span class="ml-2">{{ simpleAddress }}</span>
+      <div class="row justify-content-center" v-if="isConnected">
+        <div class="col-xl-5 col-lg-5 text-white ">
+          <div class="d-flex align-items-center" style="background: linear-gradient(52.01deg, rgb(40, 20, 74) 0%, rgb(81, 42, 150) 100%);
+             margin-bottom: -30px; padding: 30px 0 50px 0;border-top-left-radius: 1rem;border-top-right-radius: 1rem">
+            <div class="col-7 col-md-7 p-0 pl-4">
+              <div class="fs-7">Available to stake</div>
+              <div class="fs-5 font-weight-bold">{{ balance ? parseFloat(balance.formatted).toFixed(6) || 0 : 0 }} FIL</div>
+            </div>
+            <div class="col-5 col-md-5 p-0 text-right" style="padding-right: 30px!important;">
+              <div class="p-1 pl-2 pr-3 d-inline-flex"
+                   data-toggle="modal" data-target="#exampleModal"
+                   style="cursor: pointer; border-radius: 50px;background-color: rgba(0, 0, 0, 0.2)">
+                <div class="ml-1 text-nowrap">
+                <span>
+                 <img style="border-radius: 100%; width: 1.5rem;" src="@/assets/images/avatar/default.webp" alt="">
+                </span>
+                  <span class="ml-2 fs-8">{{ simpleAddress }}</span>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="text-driver mt-3 mb-3"></div>
-          <div class="col-8 p-0" style="padding: 0 30px!important;">
-            <div class="fs-7">Staked amount</div>
-            <div class="fs-5 font-weight-bold">0.0 stFIL</div>
-            <div class="fs-7 text-black-900">0.0 FIL</div>
           </div>
         </div>
       </div>
 
       <div class="row justify-content-center mt-2" v-if="tabIndex === 0">
-        <div class="col-xl-6 col-lg-6">
-          <div class="rounded shadow p-30 bg-white" style="border-radius: 1rem !important;">
+        <div class="col-xl-5 col-lg-5">
+          <div class="rounded shadow p-4 bg-white" style="border-radius: 1rem !important;">
             <div class="form-group mb-30">
               <div class="position-relative">
                 <div class="position-absolute d-flex justify-content-center align-items-center h-100"
@@ -74,7 +69,10 @@
                 <div class="col-6 text-right">$1.50</div>
               </div>
               <div class="row mt-3">
-                <div class="col-6 text-left">Reward fee</div>
+                <div class="col-6 text-left">Reward fee
+                  <span class="badge badge-pill badge-dark ml-2 cursor-pointer class-wenhao"
+                        data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom"
+                        style="border-radius: 100%;padding: 0.15rem 0.35rem">?</span></div>
                 <div class="col-6 text-right">10%</div>
               </div>
               <div class="mt-4">
@@ -90,9 +88,10 @@
           </div>
         </div>
       </div>
+
       <div class="row justify-content-center mt-2" v-if="tabIndex === 1">
-        <div class="col-xl-6 col-lg-6">
-          <div class="rounded shadow p-30 bg-white" style="border-radius: 1rem !important;">
+        <div class="col-xl-5 col-lg-5">
+          <div class="rounded shadow p-4 bg-white" style="border-radius: 1rem !important;">
 
             <div class="alert alert-warning">
               Default stMATIC unstaking period takes around 3-4 days (80 epochs) to process. After that you can <span
@@ -140,8 +139,8 @@
         </div>
       </div>
       <div class="row justify-content-center mt-2" v-if="tabIndex === 2">
-        <div class="col-xl-6 col-lg-6">
-          <div class="rounded shadow p-30 bg-white" style="border-radius: 1rem !important;">
+        <div class="col-xl-5 col-lg-5">
+          <div class="rounded shadow p-4 bg-white" style="border-radius: 1rem !important;">
 
             <div class="alert alert-warning">
               You will be able to claim your rewards after the withdraw request has been processed. To <span
@@ -151,11 +150,11 @@
             <div class="form-group mb-30">
               <div class="d-flex p-3 bg-light-gray" style="border-radius: 5px;">
                 <div class="col-6">
-                  <div class="text-black-800">Total claimable rewards</div>
+                  <div class="text-black-800 fs-7">Total claimable rewards</div>
                   <div class="font-weight-bold fs-5">0.0 FIL</div>
                 </div>
                 <div class="col-6">
-                  <div class="text-black-800">Pending amount</div>
+                  <div class="text-black-800 fs-7">Pending amount</div>
                   <div class="fs-5">0.0 FIL</div>
                 </div>
               </div>
@@ -176,11 +175,11 @@
         </div>
       </div>
       <div class="row justify-content-center mt-4 flex-column align-content-center">
-        <div class="col-xl-6 col-lg-6 text-center">
+        <div class="col-xl-5 col-lg-5 text-center">
           <h5 class="font-weight-bold text-black-600">STFIL statistics</h5>
         </div>
-        <div class="col-xl-6 col-lg-6 mt-2">
-          <div class="rounded shadow p-30 bg-white" style="border-radius: 1rem !important;">
+        <div class="col-xl-5 col-lg-5 mt-2">
+          <div class="rounded shadow p-4 bg-white" style="border-radius: 1rem !important;">
 
             <div class="text-black-600">
               <div class="row">

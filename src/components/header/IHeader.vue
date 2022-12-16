@@ -27,25 +27,25 @@
           </ul>
         </div>
 
-        <div class="d-flex flex-row justify-content-center" v-if="!address">
-          <button class="btn btn-sm btn-outline-primary" data-toggle="modal" @click="connectWallet"
-                  data-target="#signup-modal">连接钱包 {{
-              isConnecting && pendingConnector && connectors[0].id === pendingConnector?.id ? ' (connecting...)' : ''
-            }}
-          </button>
-        </div>
-        <div class="d-flex flex-row justify-content-center" v-if="address">
-          <div class="border p-1 pl-2 pr-2"
-               data-toggle="modal" data-target="#exampleModal"
-               style="cursor: pointer; border-radius: 50px;background-color: white;">
-            <div class="ml-1">
-            <span>
-                  <img style="border-radius: 100%; width: 28px;" src="@/assets/images/avatar/default.webp" alt="">
-                </span>
-              <span class="ml-2" style="margin-top: 10px">{{ simpleAddress }}</span>
-            </div>
-          </div>
-        </div>
+<!--        <div class="d-flex flex-row justify-content-center" v-if="!address">-->
+<!--          <button class="btn btn-sm btn-outline-primary" data-toggle="modal" @click="connectWallet"-->
+<!--                  data-target="#signup-modal">连接钱包 {{-->
+<!--              isConnecting && pendingConnector && connectors[0].id === pendingConnector?.id ? ' (connecting...)' : ''-->
+<!--            }}-->
+<!--          </button>-->
+<!--        </div>-->
+<!--        <div class="d-flex flex-row justify-content-center" v-if="address">-->
+<!--          <div class="border p-1 pl-2 pr-2"-->
+<!--               data-toggle="modal" data-target="#exampleModal"-->
+<!--               style="cursor: pointer; border-radius: 50px;background-color: white;">-->
+<!--            <div class="ml-1">-->
+<!--            <span>-->
+<!--                  <img style="border-radius: 100%; width: 28px;" src="@/assets/images/avatar/default.webp" alt="">-->
+<!--                </span>-->
+<!--              <span class="ml-2" style="margin-top: 10px">{{ simpleAddress }}</span>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
       </nav>
     </div>
   </header>
