@@ -1064,3 +1064,12 @@ input[type="number"] {
 .content-full-height {
 	min-height: calc(100vh - 95.5px - 146px);
 }
+
+.text-driver {
+	width: 90%;
+	margin: 0 auto;
+	height: 1px;
+	background-color: rgb(242, 244, 246);
+	opacity: 0.1;
+	border-radius: 100%;
+}

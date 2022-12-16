@@ -20,14 +20,14 @@
         <!-- mobile-nav control button -->
 
         <div class="collapse navbar-collapse" id="navlinks">
-          <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav ml-auto mr-0 mr-sm-3 mr-lg-3">
             <li class="nav-item" v-for="(menu ,index) in menus" :key="index">
               <a class="nav-link cursor-pointer" @click="checkMenu(menu)">{{ menu.label }}</a>
             </li>
           </ul>
         </div>
 
-        <div class="navbar-button ml-5" v-if="!address">
+        <div class="d-flex flex-row justify-content-center" v-if="!address">
           <button class="btn btn-sm btn-outline-primary" data-toggle="modal" @click="connectWallet"
                   data-target="#signup-modal">连接钱包 {{
               isConnecting && pendingConnector && connectors[0].id === pendingConnector?.id ? ' (connecting...)' : ''
@@ -35,12 +35,14 @@
           </button>
         </div>
         <div class="d-flex flex-row justify-content-center" v-if="address">
-          <div class="border p-1 pl-2 pr-2" style="cursor: pointer; border-radius: 50px;">
+          <div class="border p-1 pl-2 pr-2"
+               data-toggle="modal" data-target="#exampleModal"
+               style="cursor: pointer; border-radius: 50px;background-color: white;">
             <div class="ml-1">
             <span>
                   <img style="border-radius: 100%; width: 28px;" src="@/assets/images/avatar/default.webp" alt="">
                 </span>
-              {{ simpleAddress }}
+              <span class="ml-2" style="margin-top: 10px">{{ simpleAddress }}</span>
             </div>
           </div>
         </div>
