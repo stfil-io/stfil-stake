@@ -10,7 +10,7 @@
         <SlideTabs @select="selectTab"></SlideTabs>
       </div>
 
-      <div class="row justify-content-center" style="margin: 16px;">
+      <div class="row justify-content-center" style="margin: 16px;" v-if="isConnected">
         <div class="col-xl-6 col-lg-6 row text-white"
              style="background: linear-gradient(52.01deg, rgb(40, 20, 74) 0%, rgb(81, 42, 150) 100%);
              margin-bottom: -30px; padding: 30px 0; border-top-left-radius: 1rem;border-top-right-radius: 1rem">
