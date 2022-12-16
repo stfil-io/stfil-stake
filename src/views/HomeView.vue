@@ -7,16 +7,22 @@
       </div>
 
       <div class="row justify-content-center mt-3 mb-3">
-        <SlideTabs @select="selectTab"></SlideTabs>
+        <div class="col-xl-5 col-lg-5">
+          <SlideTabs @select="selectTab"></SlideTabs>
+        </div>
       </div>
 
       <div class="row justify-content-center" v-if="isConnected">
         <div class="col-xl-5 col-lg-5 text-white ">
           <div class="d-flex align-items-center" style="background: linear-gradient(52.01deg, rgb(40, 20, 74) 0%, rgb(81, 42, 150) 100%);
              margin-bottom: -30px; padding: 30px 0 50px 0;border-top-left-radius: 1rem;border-top-right-radius: 1rem">
-            <div class="col-7 col-md-7 p-0 pl-4">
+            <div v-if="tabIndex === 0" class="col-7 col-md-7 p-0 pl-4">
               <div class="fs-7">Available to stake</div>
               <div class="fs-5 font-weight-bold">{{ balance ? parseFloat(balance.formatted).toFixed(6) || 0 : 0 }} FIL</div>
+            </div>
+            <div v-if="tabIndex !== 0" class="col-7 col-md-7 p-0 pl-4">
+              <div class="fs-7">Staked amount</div>
+              <div class="fs-5 font-weight-bold">{{ 0.0 }} stFIL</div>
             </div>
             <div class="col-5 col-md-5 p-0 text-right" style="padding-right: 30px!important;">
               <div class="p-1 pl-2 pr-3 d-inline-flex"
@@ -93,7 +99,7 @@
         <div class="col-xl-5 col-lg-5">
           <div class="rounded shadow p-4 bg-white" style="border-radius: 1rem !important;">
 
-            <div class="alert alert-warning">
+            <div class="alert alert-warning fs-8">
               Default stMATIC unstaking period takes around 3-4 days (80 epochs) to process. After that you can <span
                 style="color: #3A9CFF;cursor: pointer">claim</span> your rewards in Claim tab
             </div>
@@ -142,7 +148,7 @@
         <div class="col-xl-5 col-lg-5">
           <div class="rounded shadow p-4 bg-white" style="border-radius: 1rem !important;">
 
-            <div class="alert alert-warning">
+            <div class="alert alert-warning fs-8">
               You will be able to claim your rewards after the withdraw request has been processed. To <span
                 style="color: #3A9CFF;cursor: pointer">unstake</span> your amount go to Unstake tab
             </div>

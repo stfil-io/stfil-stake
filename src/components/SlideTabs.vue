@@ -35,6 +35,7 @@ export default {
 
 .slide-tabs {
   display: flex;
+  width: 100%;
   position: relative;
   background-color: #fff;
   box-shadow: 0 0 1px 0 rgba(24, 94, 224, 0.15), 0 6px 12px 0 rgba(24, 94, 224, 0.15);
@@ -54,8 +55,8 @@ input[type=radio] {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 45px;
-  width: 150px;
+  height: 35px;
+  width: 33%;
   font-size: 1rem;
   font-weight: 600;
   border-radius: 99px;
@@ -88,8 +89,8 @@ input[id=radio-3]:checked ~ .slider-glider {
 .slider-glider {
   position: absolute;
   display: flex;
-  height: 45px;
-  width: 150px;
+  height: 35px;
+  width: 32.3%;
   background-color: var(--secondary-color);
   z-index: 1;
   border-radius: 99px;
@@ -97,8 +98,8 @@ input[id=radio-3]:checked ~ .slider-glider {
 }
 
 @media (max-width: 700px) {
-  .slide-tabs {
-    transform: scale(0.79);
-  }
+  /*.slide-tabs {*/
+  /*  transform: scale(0.78);*/
+  /*}*/
 }
 </style>
