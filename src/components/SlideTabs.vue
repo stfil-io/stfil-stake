@@ -98,7 +98,7 @@ input[id=radio-3]:checked ~ .slider-glider {
 
 @media (max-width: 700px) {
   .slide-tabs {
-    transform: scale(0.8);
+    transform: scale(0.79);
   }
 }
 </style>
