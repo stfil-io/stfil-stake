@@ -23,8 +23,8 @@ export default {
 
 <style>
 :root {
-  --primary-color: #FF3158;
-  --secondary-color: #e6eef9;
+  --primary-color: #6752F0;
+  --secondary-color: #ECEBFF;
 }
 
 *,
@@ -38,10 +38,10 @@ export default {
   width: 100%;
   position: relative;
   background-color: #fff;
-  box-shadow: 0 0 1px 0 rgba(24, 94, 224, 0.15), 0 6px 12px 0 rgba(24, 94, 224, 0.15);
+  box-shadow: 0px 6px 24px 0px rgba(21,42,149,0.12);
   padding: 0.4rem;
   border-radius: 99px;
-  color: #6d6d6d;
+  color: #101B52;
 }
 .slide-tabs * {
   z-index: 2;
@@ -63,10 +63,12 @@ input[type=radio] {
   cursor: pointer;
   transition: color 0.15s ease-in;
   margin: 0;
+  opacity: 0.6;
 }
 
 input[type=radio]:checked + label {
   color: var(--primary-color);
+  opacity: 1 !important;
 }
 input[type=radio]:checked + label > .notification {
   background-color: var(--primary-color);

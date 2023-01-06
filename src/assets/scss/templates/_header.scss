@@ -11,14 +11,14 @@
         .nav-link {
             font-weight: 600;
             font-size: 15px;
-            color: $black-200 !important;
+            color: $primary-text-color !important;
             padding-left: 17px !important;
             padding-right: 17px !important;
         }
         &:hover,
         &.active {
             .nav-link {
-                color: $color-primary !important;
+                color: $primary-text-color !important;
             }
         }
     }

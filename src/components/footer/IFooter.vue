@@ -6,7 +6,7 @@
         <div class="col-lg-5 col-md-6">
           <div class="pr-0 pr-lg-4">
             <a class="mb-25" href="#">
-              <img class="img-fluid mb-4" src="@/assets/logo.png">
+              <img class="img-fluid mb-4 logo-ad" src="@/assets/images/logo/logo.png">
             </a>
             <p>
               STFIL is a liquidity pledge protocol built on top of Filecoin that is designed to be community-owned, decentralized, and trust-free, allowing users to earn block rewards without locking up assets or maintaining Storage Provider infrastructure.

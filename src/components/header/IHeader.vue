@@ -3,7 +3,7 @@
     <div class="container">
       <nav class="navbar navbar-expand-xl navbar-light px-0">
         <a class="navbar-brand p-0" href="#">
-          <img class="img-fluid" src="@/assets/logo.png">
+          <img class="img-fluid logo-ad" src="@/assets/images/logo/logo.png">
         </a>
 
         <button class="navbar-toggler bg-white rounded-0 p-0" type="button" data-toggle="collapse"

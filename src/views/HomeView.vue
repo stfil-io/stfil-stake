@@ -2,8 +2,8 @@
   <section class="section-padding pt-0 horizontal-accordion bg-light-gray content-full-height">
     <div class="container">
       <div class="row justify-content-center flex-column align-content-center align-items-center">
-        <h3 class="font-weight-bold text-black-400" style="z-index: 1">Stake FIL</h3>
-        <span class="text-black-600" style="z-index: 1">Stake Matic and receive stMatic while staking.</span>
+        <h3 class="fw-extra-bold fs-24" style="z-index: 1">Stake FIL</h3>
+        <span class="fw-medium fs-18" style="z-index: 1">Stake Matic and receive stMatic while staking.</span>
       </div>
 
       <div class="row justify-content-center mt-3 mb-3">
@@ -18,7 +18,8 @@
              margin-bottom: -30px; padding: 30px 0 50px 0;border-top-left-radius: 1rem;border-top-right-radius: 1rem">
             <div v-if="tabIndex === 0" class="col-7 col-md-7 p-0 pl-4">
               <div class="fs-7">Available to stake</div>
-              <div class="fs-5 font-weight-bold">{{ balance ? parseFloat(balance.formatted).toFixed(6) || 0 : 0 }} FIL</div>
+              <div class="fs-5 font-weight-bold">{{ balance ? parseFloat(balance.formatted).toFixed(6) || 0 : 0 }} FIL
+              </div>
             </div>
             <div v-if="tabIndex !== 0" class="col-7 col-md-7 p-0 pl-4">
               <div class="fs-7">Staked amount</div>
@@ -53,33 +54,36 @@
                 </div>
                 <div class="position-absolute d-flex justify-content-center align-items-center h-100"
                      style="right: 0;width: 6rem;">
-                  <button type="button" class="btn btn-info btn-sm" style="padding: 4px 15px;">MAX</button>
+                  <button type="button" class="btn btn-info btn-sm btn-max" style="padding: 4px 15px;">MAX</button>
                 </div>
                 <input class="form-control shadow-none"
-                       style="padding: 1rem 6rem 1rem 4rem;appearance:none; height: 60px; font-size: 1.2rem;"
+                       style="padding: 1rem 6rem 1rem 4rem;appearance:none; height: 60px; font-size: 1.2rem;border-color: #101B5233"
                        type="number" placeholder="0.00" autocomplete="off" id="fname" required=""/>
               </div>
             </div>
 
             <div class="text-black-600">
               <div class="row">
-                <div class="col-6 text-left">You will receive</div>
-                <div class="col-6 text-right">11 stFIL</div>
+                <div class="col-6 text-left fw-medium fs-14">You will receive</div>
+                <div class="col-6 text-right fw-medium fs-14 opacity-08">11 stFIL</div>
               </div>
               <div class="row mt-3">
-                <div class="col-6 text-left">Exchange rate</div>
-                <div class="col-6 text-right">1 FIL = 1 stFIL</div>
+                <div class="col-6 text-left fw-medium fs-14">Exchange rate</div>
+                <div class="col-6 text-right fw-medium fs-14 opacity-08">1 FIL = 1 stFIL</div>
               </div>
               <div class="row mt-3">
-                <div class="col-6 text-left">Transaction cost</div>
-                <div class="col-6 text-right">$1.50</div>
+                <div class="col-6 text-left fw-medium fs-14">Transaction cost</div>
+                <div class="col-6 text-right fw-medium fs-14 opacity-08">$1.50</div>
               </div>
               <div class="row mt-3">
-                <div class="col-6 text-left">Reward fee
-                  <span class="badge badge-pill badge-dark ml-2 cursor-pointer class-wenhao"
-                        data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom"
-                        style="border-radius: 100%;padding: 0.15rem 0.35rem">?</span></div>
-                <div class="col-6 text-right">10%</div>
+                <div class="col-6 text-left fw-medium fs-14 ">Reward fee
+                  <span class="w-class">
+                    <img src="@/assets/images/icons/w.png"
+                         class=""
+                         style="cursor:pointer;width: 18px;height: 18px;margin-left: 10px;" alt="">
+                  </span>
+                </div>
+                <div class="col-6 text-right fw-medium fs-14 opacity-08">10%</div>
               </div>
               <div class="mt-4">
                 <button v-if="!isConnected" class="btn btn-primary w-100" type="submit" @click="connectWallet">Connect
@@ -99,7 +103,8 @@
         <div class="col-xl-5 col-lg-5">
           <div class="rounded shadow p-4 bg-white" style="border-radius: 1rem !important;">
 
-            <div class="alert alert-warning fs-8">
+            <div class="alert alert-warning fs-12 fw-medium"
+                 style="color: #9E6900!important;background-color: #FFF5D6!important;border-color: #FFEEBA!important;">
               Default stMATIC unstaking period takes around 3-4 days (80 epochs) to process. After that you can <span
                 style="color: #3A9CFF;cursor: pointer">claim</span> your rewards in Claim tab
             </div>
@@ -114,7 +119,7 @@
                 </div>
                 <div class="position-absolute d-flex justify-content-center align-items-center h-100"
                      style="right: 0;width: 6rem;">
-                  <button type="button" class="btn btn-info btn-sm" style="padding: 4px 15px;">MAX</button>
+                  <button type="button" class="btn btn-info btn-sm btn-max" style="padding: 4px 15px;">MAX</button>
                 </div>
                 <input class="form-control shadow-none"
                        style="padding: 1rem 6rem 1rem 4rem;appearance:none; height: 60px; font-size: 1.2rem;"
@@ -124,12 +129,12 @@
 
             <div class="text-black-600">
               <div class="row">
-                <div class="col-6 text-left">You will receive</div>
-                <div class="col-6 text-right">11 FIL</div>
+                <div class="col-6 text-left fw-medium fs-14">You will receive</div>
+                <div class="col-6 text-right fw-medium fs-14 opacity-08">11 FIL</div>
               </div>
               <div class="row mt-3">
-                <div class="col-6 text-left">Exchange rate</div>
-                <div class="col-6 text-right">1 stFIL = 1 FIL</div>
+                <div class="col-6 text-left fw-medium fs-14">Exchange rate</div>
+                <div class="col-6 text-right fw-medium fs-14 opacity-08">1 stFIL = 1 FIL</div>
               </div>
               <div class="mt-4">
                 <button v-if="!isConnected" class="btn btn-primary w-100" type="submit" @click="connectWallet">Connect
@@ -148,7 +153,8 @@
         <div class="col-xl-5 col-lg-5">
           <div class="rounded shadow p-4 bg-white" style="border-radius: 1rem !important;">
 
-            <div class="alert alert-warning fs-8">
+            <div class="alert alert-warning fs-12"
+                 style="color: #9E6900!important;background-color: #FFF5D6!important;border-color: #FFEEBA!important;">
               You will be able to claim your rewards after the withdraw request has been processed. To <span
                 style="color: #3A9CFF;cursor: pointer">unstake</span> your amount go to Unstake tab
             </div>
@@ -156,25 +162,28 @@
             <div class="form-group mb-30">
               <div class="d-flex p-3 bg-light-gray" style="border-radius: 5px;">
                 <div class="col-6 p-0">
-                  <div class="text-black-800 fs-8">Total claimable rewards</div>
-                  <div class="font-weight-bold fs-5">0.0 FIL</div>
+                  <div class="fw-medium fs-14 ">Total claimable rewards</div>
+                  <div class="fw-medium fs-14 opacity-08">0.0 FIL</div>
                 </div>
                 <div class="col-6 p-0">
-                  <div class="text-black-800 fs-8">Pending amount</div>
-                  <div class="fs-5">0.0 FIL</div>
+                  <div class="fw-medium fs-14 ">Pending amount</div>
+                  <div class="fw-medium fs-14 opacity-08">0.0 FIL</div>
                 </div>
               </div>
             </div>
 
             <div class="text-black-600">
               <div class="mt-4">
-                <button v-if="!isConnected" class="btn btn-primary w-100" type="submit" @click="connectWallet">Connect
+                <button v-if="!isConnected" class="btn btn-primary w-100 fw-medium fs-14" type="submit"
+                        @click="connectWallet">Connect
                   Wallet
                   {{
                     isConnecting && pendingConnector && connectors[0].id === pendingConnector?.id ? ' (connecting...)' : ''
                   }}
                 </button>
-                <button v-if="isConnected" class="btn btn-primary w-100" type="submit" @click="stake">STAKE</button>
+                <button v-if="isConnected" class="btn btn-primary w-100 fw-medium fs-14" type="submit" @click="stake">
+                  STAKE
+                </button>
               </div>
             </div>
           </div>
@@ -182,27 +191,27 @@
       </div>
       <div class="row justify-content-center mt-4 flex-column align-content-center">
         <div class="col-xl-5 col-lg-5 text-center">
-          <h5 class="font-weight-bold text-black-600">STFIL statistics</h5>
+          <h5 class="fw-extra-bold fs-18">STFIL statistics</h5>
         </div>
         <div class="col-xl-5 col-lg-5 mt-2">
           <div class="rounded shadow p-4 bg-white" style="border-radius: 1rem !important;">
 
             <div class="text-black-600">
               <div class="row">
-                <div class="col-6 text-left">Annual percentage rate</div>
-                <div class="col-6 text-right">4.6%</div>
+                <div class="col-6 text-left fw-medium fs-14">Annual percentage rate</div>
+                <div class="col-6 text-right fw-medium fs-14 opacity-08">4.6%</div>
               </div>
               <div class="row mt-3">
-                <div class="col-6 text-left">Total staked with STFIL</div>
-                <div class="col-6 text-right">4,799,202.205 FIL</div>
+                <div class="col-6 text-left fw-medium fs-14">Total staked with STFIL</div>
+                <div class="col-6 text-right fw-medium fs-14 opacity-08">4,799,202.205 FIL</div>
               </div>
               <div class="row mt-3">
-                <div class="col-6 text-left">Stakers</div>
-                <div class="col-6 text-right">138041</div>
+                <div class="col-6 text-left fw-medium fs-14">Stakers</div>
+                <div class="col-6 text-right fw-medium fs-14 opacity-08">138041</div>
               </div>
               <div class="row mt-3">
-                <div class="col-6 text-left">stFIL market cap</div>
-                <div class="col-6 text-right">$6,285,336,337</div>
+                <div class="col-6 text-left fw-medium fs-14">stFIL market cap</div>
+                <div class="col-6 text-right fw-medium fs-14 opacity-08">$6,285,336,337</div>
               </div>
             </div>
           </div>
