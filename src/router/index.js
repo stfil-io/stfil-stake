@@ -1,5 +1,6 @@
 import {createRouter, createWebHashHistory} from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import FaqView from "@/views/FaqView";
 
 const routes = [
     {
@@ -11,6 +12,7 @@ const routes = [
     {
         path: '/faq',
         name: 'FaqView',
+        component: FaqView,
         meta: {title:'STFIL-STAKE | Faq',description:'Filecoin Liquid Staking'},
     }
 ]

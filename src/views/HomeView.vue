@@ -148,7 +148,7 @@
                     isConnecting && pendingConnector && connectors[0].id === pendingConnector?.id ? ' (connecting...)' : ''
                   }}
                 </button>
-                <button v-if="isConnected" class="btn btn-primary w-100" type="submit" @click="stake">STAKE</button>
+                <button v-if="isConnected" class="btn btn-primary w-100" type="submit" @click="stake">UNSTAKE</button>
               </div>
             </div>
           </div>
@@ -187,7 +187,7 @@
                   }}
                 </button>
                 <button v-if="isConnected" class="btn btn-primary w-100 fw-medium fs-14" type="submit" @click="stake">
-                  STAKE
+                  CLAIM
                 </button>
               </div>
             </div>
