@@ -6,12 +6,13 @@ const routes = [
     {
         path: '/',
         name: 'home',
-        component: HomeView
+        component: HomeView,
+        meta: {title:'STFIL-STAKE',description:'Filecoin Liquid Staking'},
     },
     {
         path: '/faq',
         name: 'FaqView',
-        component: FaqView
+        meta: {title:'STFIL-STAKE | Faq',description:'Filecoin Liquid Staking'},
     }
 ]
 
