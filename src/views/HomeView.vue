@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row justify-content-center flex-column align-content-center align-items-center">
         <h3 class="fw-extra-bold fs-24" style="z-index: 1">Stake FIL</h3>
-        <span class="fw-medium fs-18" style="z-index: 1">Stake Matic and receive stMatic while staking.</span>
+        <span class="fw-medium fs-18 fs-sm-14" style="z-index: 1">Stake Matic and receive stMatic while staking.</span>
       </div>
 
       <div class="row justify-content-center mt-3 mb-3">
@@ -76,12 +76,15 @@
                 <div class="col-6 text-right fw-medium fs-14 opacity-08">$1.50</div>
               </div>
               <div class="row mt-3">
-                <div class="col-6 text-left fw-medium fs-14 ">Reward fee
-                  <span class="w-class">
+                <div class="col-6 text-left fw-medium fs-14 d-flex align-items-center">
+                  <div>
+                    Reward fee
+                  </div>
+                  <div class="w-class">
                     <img src="@/assets/images/icons/w.png"
                          class=""
                          style="cursor:pointer;width: 18px;height: 18px;margin-left: 10px;" alt="">
-                  </span>
+                  </div>
                 </div>
                 <div class="col-6 text-right fw-medium fs-14 opacity-08">10%</div>
               </div>
@@ -198,20 +201,20 @@
 
             <div class="text-black-600">
               <div class="row">
-                <div class="col-6 text-left fw-medium fs-14">Annual percentage rate</div>
-                <div class="col-6 text-right fw-medium fs-14 opacity-08">4.6%</div>
+                <div class="col-7 text-left fw-medium fs-14">Annual percentage rate</div>
+                <div class="col-5 text-right fw-medium fs-14 opacity-08">4.6%</div>
               </div>
               <div class="row mt-3">
-                <div class="col-6 text-left fw-medium fs-14">Total staked with STFIL</div>
-                <div class="col-6 text-right fw-medium fs-14 opacity-08">4,799,202.205 FIL</div>
+                <div class="col-7 text-left fw-medium fs-14">Total staked with STFIL</div>
+                <div class="col-5 text-right fw-medium fs-14 opacity-08">4,799,202.205 FIL</div>
               </div>
               <div class="row mt-3">
-                <div class="col-6 text-left fw-medium fs-14">Stakers</div>
-                <div class="col-6 text-right fw-medium fs-14 opacity-08">138041</div>
+                <div class="col-7 text-left fw-medium fs-14">Stakers</div>
+                <div class="col-5 text-right fw-medium fs-14 opacity-08">138041</div>
               </div>
               <div class="row mt-3">
-                <div class="col-6 text-left fw-medium fs-14">stFIL market cap</div>
-                <div class="col-6 text-right fw-medium fs-14 opacity-08">$6,285,336,337</div>
+                <div class="col-7 text-left fw-medium fs-14">stFIL market cap</div>
+                <div class="col-5 text-right fw-medium fs-14 opacity-08">$6,285,336,337</div>
               </div>
             </div>
           </div>
