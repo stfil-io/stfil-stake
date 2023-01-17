@@ -9,7 +9,7 @@
               <img class="img-fluid mb-4 logo-ad" src="@/assets/images/logo/logo.png">
             </a>
             <p>
-              STFIL is a liquidity pledge protocol built on top of Filecoin that is designed to be community-owned, decentralized, and trust-free, allowing users to earn block rewards without locking up assets or maintaining Storage Provider infrastructure.
+              STFIL is a liquidity pledge protocol built on FVM that is designed to be community-owned, decentralized, and trust-free, allowing users to earn block rewards without locking up assets or maintaining Storage Provider infrastructure.
             </p>
           </div>
         </div>
