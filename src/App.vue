@@ -4,7 +4,7 @@
     <div class="preloader position-fixed d-flex align-items-center justify-content-center">
       <div class="block">
         <div class="loader-image mb-20">
-          <img src="@/assets/images/logo/logo-light.png" alt="">
+          <img src="@/assets/images/logo/logo-light.png" alt="" style="width: 50px;height: 50px;">
         </div>
         <h2 class="loader-text text-uppercase">
           <span class="h3 font-weight-light mb-1">Welcome to</span>

@@ -1,17 +1,19 @@
 import {createRouter, createWebHashHistory} from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import FaqView from '../views/FaqView.vue'
+import FaqView from "@/views/FaqView";
 
 const routes = [
     {
         path: '/',
         name: 'home',
-        component: HomeView
+        component: HomeView,
+        meta: {title:'STFIL-STAKE',description:'Filecoin Liquid Staking'},
     },
     {
         path: '/faq',
         name: 'FaqView',
-        component: FaqView
+        component: FaqView,
+        meta: {title:'STFIL-STAKE | Faq',description:'Filecoin Liquid Staking'},
     }
 ]
 

@@ -16,6 +16,9 @@ export default {
   methods: {
     selectTab(v){
       this.$emit("select", v)
+    },
+    changeTab(index){
+      document.getElementById("radio-" + index).click()
     }
   }
 }
