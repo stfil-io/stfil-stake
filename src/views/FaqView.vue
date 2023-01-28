@@ -8,11 +8,11 @@
         <div class="col-xl-6 col-lg-6">
           <div class="rounded shadow p-30 pt-4 pb-4 bg-white" style="border-radius: 1rem !important;">
             <a class="h4" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-              How does Lido work?
+              How does STFIL work?
             </a>
             <div class="collapse" id="collapseExample">
               <div class="card pt-3 border-0 text-black-800">
-                When staking with Lido, users receive stETH tokens which are issued 1:1 to their initial stake. stETH balances can be used like regular ETH to earn and lending rewards, and are updated on a daily basis to reflect your ETH staking rewards. Note that there are no lock-ups or minimum deposits when staking with Lido.
+                When staking with STFIL, users receive stFIL tokens which are issued 1:1 to their initial stake. stFIL balances can be used like regular FIL to earn and lending rewards, and are updated on a daily basis to reflect your FIL staking rewards. Note that there are no lock-ups or minimum deposits when staking with STFIL.
               </div>
             </div>
           </div>

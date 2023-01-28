@@ -2,8 +2,8 @@
   <section class="section-padding pt-0 horizontal-accordion bg-light-gray content-full-height">
     <div class="container">
       <div class="row justify-content-center flex-column align-content-center align-items-center">
-        <h3 class="fw-extra-bold fs-24" style="z-index: 1">Stake FIL</h3>
-        <span class="fw-medium fs-18 fs-sm-14" style="z-index: 1">Stake FIL and receive stFIL while staking.</span>
+        <h3 class="fw-extra-bold fs-24" style="z-index: 1">{{$t('home title')}}</h3>
+        <span class="fw-medium fs-18 fs-sm-14" style="z-index: 1">{{$t('home tips')}}</span>
       </div>
 
       <div class="row justify-content-center mt-3 mb-3">
@@ -54,7 +54,7 @@
                 </div>
                 <div class="position-absolute d-flex justify-content-center align-items-center h-100"
                      style="right: 0;width: 6rem;">
-                  <button type="button" class="btn btn-info btn-sm btn-max" style="padding: 4px 15px;">MAX</button>
+                  <button type="button" class="btn btn-info btn-sm btn-max" style="padding: 4px 15px;">{{$t("max")}}</button>
                 </div>
                 <input class="form-control shadow-none"
                        v-model="data.stfil.receive"
@@ -65,21 +65,21 @@
 
             <div class="text-black-600">
               <div class="row">
-                <div class="col-6 text-left fw-medium fs-14">You will receive</div>
+                <div class="col-6 text-left fw-medium fs-14">{{$t("you-will-receive")}}</div>
                 <div class="col-6 text-right fw-medium fs-14 opacity-08">{{ data.stfil.receive || 0 }} stFIL</div>
               </div>
               <div class="row mt-3">
-                <div class="col-6 text-left fw-medium fs-14">Exchange rate</div>
+                <div class="col-6 text-left fw-medium fs-14">{{$t("exchange-rate")}}</div>
                 <div class="col-6 text-right fw-medium fs-14 opacity-08">1 FIL = 1 stFIL</div>
               </div>
               <div class="row mt-3">
-                <div class="col-6 text-left fw-medium fs-14">Transaction cost</div>
+                <div class="col-6 text-left fw-medium fs-14">{{$t("transaction-cost")}}</div>
                 <div class="col-6 text-right fw-medium fs-14 opacity-08">$0</div>
               </div>
               <div class="row mt-3">
                 <div class="col-6 text-left fw-medium fs-14 d-flex align-items-center">
                   <div>
-                    Reward fee
+                    {{$t("reward-fee")}}
                   </div>
                   <div class="w-class">
                     <img src="@/assets/images/icons/w.png"
@@ -90,8 +90,8 @@
                 <div class="col-6 text-right fw-medium fs-14 opacity-08">10%</div>
               </div>
               <div class="mt-4">
-                <button v-if="!isConnected" class="btn btn-primary w-100" type="submit" @click="connectWallet">Connect
-                  Wallet
+                <button v-if="!isConnected" class="btn btn-primary w-100" type="submit" @click="connectWallet">
+                  {{$t('connect-wallet')}}
                   {{
                     isConnecting && pendingConnector && connectors[0].id === pendingConnector?.id ? ' (connecting...)' : ''
                   }}
@@ -108,9 +108,7 @@
           <div class="rounded shadow p-4 bg-white" style="border-radius: 1rem !important;">
 
             <div class="alert alert-warning fs-12 fw-medium"
-                 style="color: #9E6900!important;background-color: #FFF5D6!important;border-color: #FFEEBA!important;">
-              Default stFIL unstaking period takes around 3-4 days (80 epochs) to process. After that you can <span
-                style="color: #3A9CFF;cursor: pointer" @click="claim">claim</span> your rewards in Claim tab
+                 style="color: #9E6900!important;background-color: #FFF5D6!important;border-color: #FFEEBA!important;" v-html="$t('unstake-tip')">
             </div>
 
             <div class="form-group mb-30">
@@ -123,7 +121,7 @@
                 </div>
                 <div class="position-absolute d-flex justify-content-center align-items-center h-100"
                      style="right: 0;width: 6rem;">
-                  <button type="button" class="btn btn-info btn-sm btn-max" style="padding: 4px 15px;">MAX</button>
+                  <button type="button" class="btn btn-info btn-sm btn-max" style="padding: 4px 15px;">{{$t("max")}}</button>
                 </div>
                 <input class="form-control shadow-none"
                        v-model="data.fil.receive"
@@ -134,16 +132,16 @@
 
             <div class="text-black-600">
               <div class="row">
-                <div class="col-6 text-left fw-medium fs-14">You will receive</div>
+                <div class="col-6 text-left fw-medium fs-14">{{$t("you-will-receive")}}</div>
                 <div class="col-6 text-right fw-medium fs-14 opacity-08">{{ data.fil.receive || 0 }} FIL</div>
               </div>
               <div class="row mt-3">
-                <div class="col-6 text-left fw-medium fs-14">Exchange rate</div>
+                <div class="col-6 text-left fw-medium fs-14">{{$t("exchange-rate")}}</div>
                 <div class="col-6 text-right fw-medium fs-14 opacity-08">1 stFIL = 1 FIL</div>
               </div>
               <div class="mt-4">
-                <button v-if="!isConnected" class="btn btn-primary w-100" type="submit" @click="connectWallet">Connect
-                  Wallet
+                <button v-if="!isConnected" class="btn btn-primary w-100" type="submit" @click="connectWallet">
+                  {{$t('connect-wallet')}}
                   {{
                     isConnecting && pendingConnector && connectors[0].id === pendingConnector?.id ? ' (connecting...)' : ''
                   }}
@@ -159,19 +157,16 @@
           <div class="rounded shadow p-4 bg-white" style="border-radius: 1rem !important;">
 
             <div class="alert alert-warning fs-12"
-                 style="color: #9E6900!important;background-color: #FFF5D6!important;border-color: #FFEEBA!important;">
-              You will be able to claim your rewards after the withdraw request has been processed. To <span
-                style="color: #3A9CFF;cursor: pointer" @click="unstake">unstake</span> your amount go to Unstake tab
-            </div>
+                 style="color: #9E6900!important;background-color: #FFF5D6!important;border-color: #FFEEBA!important;" v-html="$t('claim-tip')"></div>
 
             <div class="form-group mb-30">
               <div class="d-flex p-3 bg-light-gray" style="border-radius: 5px;">
                 <div class="col-6 p-0">
-                  <div class="fw-medium fs-14 ">Total claimable rewards</div>
+                  <div class="fw-medium fs-14 ">{{$t("total-claimable-rewards")}}</div>
                   <div class="fw-medium fs-14 opacity-08">0.0 FIL</div>
                 </div>
                 <div class="col-6 p-0">
-                  <div class="fw-medium fs-14 ">Pending amount</div>
+                  <div class="fw-medium fs-14 ">{{$t("pending-amount")}}</div>
                   <div class="fw-medium fs-14 opacity-08">0.0 FIL</div>
                 </div>
               </div>
@@ -180,8 +175,7 @@
             <div class="text-black-600">
               <div class="mt-4">
                 <button v-if="!isConnected" class="btn btn-primary w-100 fw-medium fs-14" type="submit"
-                        @click="connectWallet">Connect
-                  Wallet
+                        @click="connectWallet">{{$t('connect-wallet')}}
                   {{
                     isConnecting && pendingConnector && connectors[0].id === pendingConnector?.id ? ' (connecting...)' : ''
                   }}
@@ -196,26 +190,26 @@
       </div>
       <div class="row justify-content-center mt-4 flex-column align-content-center">
         <div class="col-xl-5 col-lg-5 text-center">
-          <h5 class="fw-extra-bold fs-18">STFIL statistics</h5>
+          <h5 class="fw-extra-bold fs-18">STFIL {{$t("statistics")}}</h5>
         </div>
         <div class="col-xl-5 col-lg-5 mt-2">
           <div class="rounded shadow p-4 bg-white" style="border-radius: 1rem !important;">
 
             <div class="text-black-600">
               <div class="row">
-                <div class="col-7 text-left fw-medium fs-14">Annual percentage rate</div>
+                <div class="col-7 text-left fw-medium fs-14">{{$t("annual-percentage-rate")}}</div>
                 <div class="col-5 text-right fw-medium fs-14 opacity-08">15%</div>
               </div>
               <div class="row mt-3">
-                <div class="col-7 text-left fw-medium fs-14">Total staked with STFIL</div>
+                <div class="col-7 text-left fw-medium fs-14">{{$t("total-staked-with")}}</div>
                 <div class="col-5 text-right fw-medium fs-14 opacity-08">4,799,202.205 FIL</div>
               </div>
               <div class="row mt-3">
-                <div class="col-7 text-left fw-medium fs-14">Stakers</div>
+                <div class="col-7 text-left fw-medium fs-14">{{$t("stakers")}}</div>
                 <div class="col-5 text-right fw-medium fs-14 opacity-08">138041</div>
               </div>
               <div class="row mt-3">
-                <div class="col-7 text-left fw-medium fs-14">stFIL market cap</div>
+                <div class="col-7 text-left fw-medium fs-14">{{$t("market-cap")}}</div>
                 <div class="col-5 text-right fw-medium fs-14 opacity-08">$6,285,336,337</div>
               </div>
             </div>

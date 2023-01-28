@@ -24,35 +24,44 @@
             <li class="nav-item" v-for="(menu ,index) in menus" :key="index">
               <a class="nav-link cursor-pointer" @click="checkMenu(menu)">{{ menu.label }}</a>
             </li>
+
+            <li class="nav-link text-left">
+              <!-- Language List -->
+              <select class="border-0 language-ui" @change="handleCommandLanguage">
+                <option v-for="(k, v) in localeDic" :value="v" :key="k" :selected="v === locale">
+                  {{ k }}
+                </option>
+              </select>
+            </li>
           </ul>
         </div>
 
-<!--        <div class="d-flex flex-row justify-content-center" v-if="!address">-->
-<!--          <button class="btn btn-sm btn-outline-primary" data-toggle="modal" @click="connectWallet"-->
-<!--                  data-target="#signup-modal">连接钱包 {{-->
-<!--              isConnecting && pendingConnector && connectors[0].id === pendingConnector?.id ? ' (connecting...)' : ''-->
-<!--            }}-->
-<!--          </button>-->
-<!--        </div>-->
-<!--        <div class="d-flex flex-row justify-content-center" v-if="address">-->
-<!--          <div class="border p-1 pl-2 pr-2"-->
-<!--               data-toggle="modal" data-target="#exampleModal"-->
-<!--               style="cursor: pointer; border-radius: 50px;background-color: white;">-->
-<!--            <div class="ml-1">-->
-<!--            <span>-->
-<!--                  <img style="border-radius: 100%; width: 28px;" src="@/assets/images/avatar/default.webp" alt="">-->
-<!--                </span>-->
-<!--              <span class="ml-2" style="margin-top: 10px">{{ simpleAddress }}</span>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
+        <!--        <div class="d-flex flex-row justify-content-center" v-if="!address">-->
+        <!--          <button class="btn btn-sm btn-outline-primary" data-toggle="modal" @click="connectWallet"-->
+        <!--                  data-target="#signup-modal">连接钱包 {{-->
+        <!--              isConnecting && pendingConnector && connectors[0].id === pendingConnector?.id ? ' (connecting...)' : ''-->
+        <!--            }}-->
+        <!--          </button>-->
+        <!--        </div>-->
+        <!--        <div class="d-flex flex-row justify-content-center" v-if="address">-->
+        <!--          <div class="border p-1 pl-2 pr-2"-->
+        <!--               data-toggle="modal" data-target="#exampleModal"-->
+        <!--               style="cursor: pointer; border-radius: 50px;background-color: white;">-->
+        <!--            <div class="ml-1">-->
+        <!--            <span>-->
+        <!--                  <img style="border-radius: 100%; width: 28px;" src="@/assets/images/avatar/default.webp" alt="">-->
+        <!--                </span>-->
+        <!--              <span class="ml-2" style="margin-top: 10px">{{ simpleAddress }}</span>-->
+        <!--            </div>-->
+        <!--          </div>-->
+        <!--        </div>-->
       </nav>
     </div>
   </header>
 </template>
 
 <script>
-import {useConnect,useAccount} from 'vagmi';
+import {useAccount, useConnect} from 'vagmi';
 
 export default {
   name: "IHeader",
@@ -66,19 +75,36 @@ export default {
       address: undefined,
       menus: [
         {
-          label: 'Home',
+          label: this.$t('home'),
           link: '/'
         },
         {
-          label: 'Faq',
+          label: this.$t('faq'),
           link: '/faq'
         },
-      ]
+      ],
+      locale: window.localStorage.getItem('locale') || 'en',
+      localeDic: {
+        'zh': 'Cn',
+        'en': 'En'
+      }
     }
   },
   watch: {
     activeConnector(val) {
       console.log('val = ', val)
+    },
+    '$i18n.locale'() {
+      this.menus = [
+        {
+          label: this.$t('home'),
+          link: '/'
+        },
+        {
+          label: this.$t('faq'),
+          link: '/faq'
+        },
+      ]
     }
   },
   created() {
@@ -105,9 +131,15 @@ export default {
       }
       this.connect(this.connectors[0])
     },
-    checkMenu(menu){
+    checkMenu(menu) {
       let {link} = menu
       this.$router.push({path: link})
+    },
+    handleCommandLanguage(language) {
+      let val = language.target.value
+      this.locale = val
+      this.$i18n.locale = val
+      window.localStorage.setItem('locale', val)
     }
   },
   computed: {
