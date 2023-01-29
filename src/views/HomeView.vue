@@ -108,7 +108,8 @@
           <div class="rounded shadow p-4 bg-white" style="border-radius: 1rem !important;">
 
             <div class="alert alert-warning fs-12 fw-medium"
-                 style="color: #9E6900!important;background-color: #FFF5D6!important;border-color: #FFEEBA!important;" v-html="$t('unstake-tip')">
+                 style="color: #9E6900!important;background-color: #FFF5D6!important;border-color: #FFEEBA!important;">
+              {{$t('unstake-tip-befor')}}<span style="color: #3A9CFF;cursor: pointer" @click="claim">CLAIM</span>{{$t('unstake-tip-after')}}
             </div>
 
             <div class="form-group mb-30">
@@ -157,7 +158,9 @@
           <div class="rounded shadow p-4 bg-white" style="border-radius: 1rem !important;">
 
             <div class="alert alert-warning fs-12"
-                 style="color: #9E6900!important;background-color: #FFF5D6!important;border-color: #FFEEBA!important;" v-html="$t('claim-tip')"></div>
+                 style="color: #9E6900!important;background-color: #FFF5D6!important;border-color: #FFEEBA!important;">
+              {{$t('claim-tip-befor')}}<span style="color: #3A9CFF;cursor: pointer" @click="unstake">UNSTAKE</span>{{$t('claim-tip-after')}}
+            </div>
 
             <div class="form-group mb-30">
               <div class="d-flex p-3 bg-light-gray" style="border-radius: 5px;">
