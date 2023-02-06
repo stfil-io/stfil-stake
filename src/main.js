@@ -13,7 +13,7 @@ const {provider, webSocketProvider} = configureChains(
     [filChain],
     [jsonRpcProvider({
         rpc: () => ({
-            http: `https://wallaby.node.glif.io/rpc/v0`,
+            http: `https://api.hyperspace.node.glif.io/rpc/v1`,
         }),
     }),],
 );

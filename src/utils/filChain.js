@@ -1,16 +1,16 @@
 export const filChain = {
-    id: 31415,
-    name: 'Filecoin - Wallaby',
+    id: 3141,
+    name: 'Filecoin - Hyperspace',
     network: 'wallaby',
     nativeCurrency: {
         decimals: 18,
-        name: 'tFIL',
-        symbol: 'tFIL',
+        name: 'TFIL',
+        symbol: 'TFIL',
     },
     rpcUrls: {
-        default: { http: ['https://wallaby.node.glif.io/rpc/v0'] },
+        default: { http: ['https://api.hyperspace.node.glif.io/rpc/v1'] },
     },
     blockExplorers: {
-        default: { name: 'SnowTrace', url: 'https://snowtrace.io' },
+        default: { name: 'SnowTrace', url: 'https://hyperspace.filfox.info/en' },
     },
 }
