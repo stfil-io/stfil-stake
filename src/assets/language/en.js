@@ -1,5 +1,5 @@
 export default {
-    'home-title': 'Stake FIL',
+    'home title': 'Stake FIL',
     'home tips': 'Stake FIL and receive stFIL while staking.',
     'home': 'Home',
     'faq': 'Faq',
